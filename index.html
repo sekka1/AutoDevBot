@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AutoDevBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+<!-- Latest compiled and minified CSS BS 3.0. RC1-->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/pricing.css" rel="stylesheet">
+
+
+
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"> 
+<!--[if lt IE 7]>
+	<link href="assets/css/font-awesome-ie7.min.css" rel="stylesheet">
+	<![endif]-->
+    <!-- Fav and touch icons -->
+
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+		<!-- Sign up for button fade -->
+		<script type="text/javascript">
+		
+			function submitForm() {
+				$('#emailSubmitButton').html('Submitting....');
+				$.ajax({type:'POST', url:'http://catalog.algorithms.io/contact/autodevbotemailajax', data:$('#ContactForm').serialize(), success: function(response) {
+					$('#emailSubmitButton ').hide();
+					$('#mce-EMAIL ').hide();
+					$('#ContactForm').find('.form_result').html('Thanks for signing up.  We will contact you once it is available');
+				}});
+				return false;
+			}
+		</script>
+
+
+
+
+  <body data-spy="scroll" data-target=".top-spy">
+   
+   <!-- NAV-->
+   <nav id="topnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <a class="navbar-brand" href="#head-top"><i class="icon-x3"></i> <img src="images/logo.png"/></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse top-spy">
+    <ul class="nav navbar-nav navbar-right">
+         <li class="active"><a href="#head-top">Home</a></li>
+				  <li><a href="#Section-1">Features</a></li>
+				  <li><a href="#sign-up">Sign Up</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div> <!-- /.container -->
+</nav>
+	<!-- /NAV -->
+<!-- HEADER --> 
+ <header id="head-top">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+		<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    
+  </ol>
+ <div class="container">
+  <!-- Carousel items -->
+  <div class="carousel-inner">	
+    <div class="active item"> 
+		
+			<div class="row">
+				<div class="text-right col-xs-12 col-sm-6 col-md-8 col-lg-8" style="padding-top:40px; ">
+					<h1 class="">API Monitoring<br/> Made Easy</h1>
+					<p class="lead">
+                        <a class="btn btn-primary btn-danger">Create My Free Account</a><br/>
+                        No credit card required · No commitment
+					</p>
+
+				</div>
+				<div class="text-center col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<img  src="images/happy-robot-head-md.png" alt="">
+				</div>
+			</div>
+	</div>
+		<!--
+    	<div class="item">
+				<div class="row">
+					<div class="text-center col-xs-12 col-sm-6 col-md-4 col-lg-4">
+						<img  src="images/flatphone.png" alt="">
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8" style="padding-top:40px; ">
+						<h1 class="">FLATSCROLLER Bootstrap 3.0.!</h1>
+						<p class="lead">
+							Now Bootstrap 3.0. supported! Here goes marketing paragraph. A good starting point for your new project. Fully adaptive flat design. Smooth scrolling and parallax effects. Just choose the appropriate colors for your project, or use ready-made skins and ... done
+						</p>
+
+					</div>
+					
+				</div>
+		</div>
+		-->
+		
+   	</div>
+   	
+ </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
+
+			
+		</div>
+      </div>
+	  
+	  <!-- GO BTN WRAPPER-->
+	  <div class="gobtnwrapper">
+		<a class="gobtn" href="#Section-1"><i class="icon-chevron-down icon-large"></i></a>
+	  </div>
+	  <!-- /GO BTN WRAPPER-->
+	</header>
+<!-- / HEADER -->
+
+
+<!--  SECTION-1 -->  
+<section id="Section-1">
+	<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+		<div class="page-header text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h3>Features</h3>
+			<p class="lead">
+                Dead Simple API Monitoring<br/>
+                Add Your API Info...We handle the rest.
+            </p>
+		</div> 
+	</div>	
+	
+	<div class="row">
+        <div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		<div class="circ-wrap">
+			<i class="icon-html5 icon-4x"></i>
+		</div>
+          <h3>Monitor your Mashery or Apigee's API</h3>
+          <p class="justify">We automatically test your API & Websocket connections and tell you if your API is up, down, or running amock. </p>
+         
+        </div>
+        <div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<div class="circ-wrap">
+			<i class="icon-css3 icon-4x"></i>
+			</div>
+          <h3>Schedule Tests</h3>
+          <p class="justify">You can optionally schedule testing to run hourly, daily, weekly, or monthly, or make it even easier by just leaving it up to us. </p>
+         
+       </div>
+        <div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		<div class="circ-wrap">
+			<i class="icon-tablet icon-4x"></i>
+			</div>
+          <h3>Get Notifications</h3>
+          <p class="justify">If your API has a problem, people and systems need to be notified to take action.  Choose from different notification options to automate your response.</p>
+        
+        </div>
+
+        <!--
+		<div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		<div class="circ-wrap">
+			<i class="icon-rocket icon-4x"></i>
+			</div>
+          <h3>You Tell Us!</h3>
+          <p class="justify">What would you like to see as a service?  Let us know.  We are always looking for more on premise or self setup tasks that can be offered as a service to make it easier on all of our lives.</p>
+        
+        </div>
+		<div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		<div class="circ-wrap">
+			<i class="icon-beaker icon-4x"></i>
+			</div>
+          <h3>Amazon EC2 Auto Snapshots</h3>
+          <p class="justify">Not sure why Amazon AWS does not provide this functionality but we will! Schedule any EC2 commands including creating a snapshot. You can have your entire infrastructure backed up!</p>
+        
+        </div>
+		<div class="text-center box col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		<div class="circ-wrap">
+			<i class="icon-thumbs-up icon-4x"></i>
+			</div>
+          <h3>Web Socket Monitoring</h3>
+          <p class="justify">Ensure that your Web Socket service is up and running all the time! This tool will enable you to connect to it and send/receive your application specific data to verify its operational state.</p>
+        
+        </div>
+        -->
+	</div>
+	
+	</div><!-- / CONTAINER-->
+	<div class="well" id="sign-up">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+					<p class="lead">
+						Sign up and stay in touch! Will let you know when it is ready to use!
+					</p>
+					
+				</div>
+				<div class="text-left col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					
+					
+										<!-- Begin MailChimp Signup Form -->
+					<div id="mc_embed_signup">
+					<form action="http://algorithms.us7.list-manage1.com/subscribe/post?u=23e025f724cd533f089201f12&amp;id=0ea7233f74" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	
+					<div class="mc-field-group">
+						<label for="mce-EMAIL">Email Address </label>
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-large btn-block btn-danger"></div>
+					</form>
+					</div>
+					<!-- End mailchimp -->
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- / SECTION-1 -->
+
+
+ 
+
+      
+<!-- FOOTER -->
+<footer id="foot-sec">
+	<div class="container">
+
+			
+			<div class="row">
+				<div class="page-header text-center col-sm-12 col-lg-12">
+					<h3 class="">Stay in touch with us</h3>
+					
+				</div>
+				<hr>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-12 text-center">
+					<div style="display:inline-block">
+						<div class="circ-wrap">
+							<a href="http://www.bootstraptor.com"><i class="icon-facebook icon-4x"></i></a>
+						</div>
+						<div class="circ-wrap">
+							<a href="http://www.bootstraptor.com"><i class="icon-twitter icon-4x"></i></a>
+						</div>					
+						<div class="circ-wrap">
+							<a href="http://www.bootstraptor.com"><i class="icon-github icon-4x"></i></a>
+						</div>					
+						<div class="circ-wrap">
+							<a href="http://www.bootstraptor.com"><i class="icon-linkedin icon-4x"></i></a>
+						</div>					
+						
+						<div class="circ-wrap">
+							<a href="http://www.bootstraptor.com"><i class="icon-google-plus icon-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+			<hr>
+				<div class="text-center col-sm-12 col-lg-12">
+						<p>© 2013 AutoDevBot.com</p>
+				</div>
+			</div>
+	</div>
+</footer>
+<!-- / FOOTER -->
+   
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js" type="text/javascript"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+<script src="assets/js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
+<script src="assets/js/jquery.localscroll-1.2.7-min.js" type="text/javascript" ></script>
+<script src="assets/js/jquery.scrollTo-1.4.6-min.js" type="text/javascript" ></script>
+<!-- PAGE CUSTOM SCROLLER -->
+<script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+
+<!-- SMOOTH SECTIONS SCROLL + PARALLAX PLUGIN -->
+<script>
+//http://www.ianlunn.co.uk/plugins/jquery-parallax/
+jQuery(document).ready(function(){
+	jQuery('#topnav').localScroll(3000);
+	jQuery('.gobtnwrapper').localScroll(3000);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	jQuery('.well').parallax("50%", 0.1);
+	//jQuery('#section-2').parallax("50%", 0.1);
+	//jQuery('#section-3').parallax("50%", 0.1);
+
+})
+</script>
+
+<!-- NICE Scroll plugin -->
+<script>
+//scroll bar custom
+	jQuery(document).ready(
+  function() {  
+    jQuery("html").niceScroll({cursorcolor:"#ffffff"});
+  }
+);
+</script>
+
+<script>
+//hide menu after click on mobile
+jQuery('.navbar .nav > li > a').click(function(){
+		jQuery('.navbar-collapse.navbar-ex1-collapse.in').removeClass('in').addClass('collapse').css('height', '0');
+
+		});
+</script>
+
+
+<script>
+	jQuery('.carousel').carousel({
+  interval: 7000
+})
+</script>
+
+</body>
+</html>
