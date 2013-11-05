@@ -6,6 +6,7 @@
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
+var monitor = require('./routes/monitor');
 var http = require('http');
 var path = require('path');
 var hash = require('./pass').hash;
@@ -128,6 +129,10 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 
 app.get('/users', restrict, user.list);
+
+app.post('/monitor', monitor.add);
+app.get('/monitor', monitor.list);
+app.delete('/monitor/:id', monitor.delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
