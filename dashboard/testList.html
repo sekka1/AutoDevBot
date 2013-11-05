@@ -1307,16 +1307,23 @@
          * Delete a monitor
          */
         function deleteMonitor(row, id){
+
             $.ajax({
                 url: 'http://127.0.0.1:8080/monitor/'+id,
                 type: 'DELETE',
                 success: function(response){
                     console.log('DELETE completed'+response);
 
-                    $('#monitorList').fnDeleteRow(row);
+                    //$('#monitorList').fnDeleteRow(row);
+                    alert('success');
 
+                },
+                error: function(response){
+                    alert('error');
                 }
             });
+
+
         }
 
 

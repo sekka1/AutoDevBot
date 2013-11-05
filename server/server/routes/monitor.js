@@ -51,7 +51,7 @@ exports.delete = function(req, res){
         }else{
 
             //callback(null,result);
-            res.send(result);
+            res.send(204, '');
 
         }
     });
