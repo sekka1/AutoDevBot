@@ -31,6 +31,8 @@ app.use(app.router);
 // Auth
 // https://github.com/visionmedia/express/blob/master/examples/auth/app.js
 
+// Test auth with dummy users
+
 // dummy database
 var users = {
     tj: { name: 'tj' }
@@ -54,7 +56,7 @@ function authenticate(name, pass, fn) {
     var user = users[name];
 
     // query the db for the given username
-    if (!user) return fn(new Error('cannot find user'));
+    if (!user) return fn(new Error('{"status":"failed", "message":"Authentication failed, please check your username and password"}'));
 
     // apply the same algorithm to the POSTed password, applying
     // the hash against the pass / salt, if there is a match we
@@ -63,7 +65,7 @@ function authenticate(name, pass, fn) {
 
         if (err) return fn(err);
         if (hash == user.hash) return fn(null, user);
-        fn(new Error('invalid password'));
+        fn(new Error('{"status":"failed", "message":"Authentication failed, please check your username and password"}'));
     })
 
 }
@@ -72,8 +74,8 @@ function restrict(req, res, next) {
     if (req.session.user) {
         next();
     } else {
-        req.session.error = 'Access denied!';
-        res.send('access denied');
+        req.session.error = '{"status":"access_denied", "message":"access denied"}';
+        res.send('{"status":"access_denied", "message":"access denied"}');
     }
 }
 
@@ -92,17 +94,13 @@ app.post('/login', function(req, res){
                 // in the session store to be retrieved,
                 // or in this case the entire user object
                 req.session.user = user;
-                req.session.success = 'Authenticated as ' + user.name
-                    + ' click to <a href="/logout">logout</a>. '
-                    + ' You may now access <a href="/restricted">/restricted</a>.';
+                req.session.success = '{"status":"success"}';
                 //res.redirect('back');
-                res.send('authentication success');
+                res.send('{"status":"success", "message":"logged in"}');
             });
         } else {
-            req.session.error = 'Authentication failed, please check your '
-                + ' username and password.'
-                + ' (use "tj" and "foobar")';
-            res.send('authentication failed, please check your username and password');
+            req.session.error = '{"status":"failed", "message":"Authentication failed, please check your username and password"}';
+            res.send('{"status":"failed", "message":"Authentication failed, please check your username and password"}');
         }
     });
 });
@@ -111,7 +109,7 @@ app.get('/logout', function(req, res){
     // destroy the user's session to log them out
     // will be re-created next request
     req.session.destroy(function(){
-        res.send('logged out');
+        res.send('{"status":"success", "message":"logged out"}');
     });
 });
 
