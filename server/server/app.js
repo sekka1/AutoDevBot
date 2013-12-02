@@ -145,9 +145,9 @@ app.get('/', routes.index);
 
 app.get('/users', restrict, user.list);
 
-app.post('/monitor', monitor.add);
-app.get('/monitor', monitor.list);
-app.delete('/monitor/:id', monitor.delete);
+app.post('/monitor', restrict, monitor.add);
+app.get('/monitor', restrict, monitor.list);
+app.delete('/monitor/:id', restrict, monitor.delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
