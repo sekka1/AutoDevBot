@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Monitor List</title>
+	<meta name="description" content="SimpliQ - Flat & Responsive Bootstrap Admin Template.">
+	<meta name="author" content="Łukasz Holeczek">
+	<meta name="keyword" content="SimpliQ, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/style.min.css" rel="stylesheet">
+	<link href="assets/css/retina.min.css" rel="stylesheet">
+	<!-- end: CSS -->
+	
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<script src="assets/css/ie6-8.css"></script>
+		
+	<![endif]-->
+	
+	<!-- start: Favicon and Touch Icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:8888/bootstrap/simpliq2/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="http://localhost:8888/bootstrap/simpliq2/ico/favicon.png">
+	<!-- end: Favicon and Touch Icons -->	
+		
+</head>
+
+<body>
+		<!-- start: Header -->
+	<header class="navbar">
+		<div class="container">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			</button>
+			<a id="main-menu-toggle" class="hidden-xs open"><i class="icon-reorder"></i></a>		
+				<a class="navbar-brand col-lg-2 col-sm-1 col-xs-12" href="index.html"><span>AutoDevBot</span></a>
+			<!-- start: Header Menu -->
+			<div class="nav-no-collapse header-nav">
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown hidden-xs">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="testList.html#">
+							<i class="icon-warning-sign"></i>
+						</a>
+						<ul class="dropdown-menu notifications">
+							<li class="dropdown-menu-title">
+								<span>You have 11 notifications</span>
+							</li>	
+                        	<li>
+                                <a href="testList.html#">
+									<span class="icon blue"><i class="icon-user"></i></span>
+									<span class="message">New user registration</span>
+									<span class="time">1 min</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon green"><i class="icon-comment-alt"></i></span>
+									<span class="message">New comment</span>
+									<span class="time">7 min</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon green"><i class="icon-comment-alt"></i></span>
+									<span class="message">New comment</span>
+									<span class="time">8 min</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon green"><i class="icon-comment-alt"></i></span>
+									<span class="message">New comment</span>
+									<span class="time">16 min</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon blue"><i class="icon-user"></i></span>
+									<span class="message">New user registration</span>
+									<span class="time">36 min</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon yellow"><i class="icon-shopping-cart"></i></span>
+									<span class="message">2 items sold</span>
+									<span class="time">1 hour</span> 
+                                </a>
+                            </li>
+							<li class="warning">
+                                <a href="testList.html#">
+									<span class="icon red"><i class="icon-user"></i></span>
+									<span class="message">User deleted account</span>
+									<span class="time">2 hour</span> 
+                                </a>
+                            </li>
+							<li class="warning">
+                                <a href="testList.html#">
+									<span class="icon red"><i class="icon-shopping-cart"></i></span>
+									<span class="message">Transaction was canceled</span>
+									<span class="time">6 hour</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon green"><i class="icon-comment-alt"></i></span>
+									<span class="message">New comment</span>
+									<span class="time">yesterday</span> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="icon blue"><i class="icon-user"></i></span>
+									<span class="message">New user registration</span>
+									<span class="time">yesterday</span> 
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-sub-footer">
+                        		<a>View all notifications</a>
+							</li>	
+						</ul>
+					</li>
+					<!-- start: Notifications Dropdown -->
+					<li class="dropdown hidden-xs">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="testList.html#">
+							<i class="icon-tasks"></i>
+						</a>
+						<ul class="dropdown-menu tasks">
+							<li>
+								<span class="dropdown-menu-title">You have 17 tasks in progress</span>
+                        	</li>
+							<li>
+                                <a href="testList.html#">
+									<span class="header">
+										<span class="title">iOS Development</span>
+										<span class="percent"></span>
+									</span>
+                                    <div class="taskProgress progressSlim progressBlue">80</div> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="header">
+										<span class="title">Android Development</span>
+										<span class="percent"></span>
+									</span>
+                                    <div class="taskProgress progressSlim progressYellow">47</div> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="header">
+										<span class="title">Django Project For Google</span>
+										<span class="percent"></span>
+									</span>
+                                    <div class="taskProgress progressSlim progressRed">32</div> 
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="header">
+										<span class="title">SEO for new sites</span>
+										<span class="percent"></span>
+									</span>
+                                    <div class="taskProgress progressSlim progressGreen">63</div> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="header">
+										<span class="title">New blog posts</span>
+										<span class="percent"></span>
+									</span>
+                                    <div class="taskProgress progressSlim progressPink">80</div> 
+                                </a>
+                            </li>
+							<li>
+                        		<a class="dropdown-menu-sub-footer">View all tasks</a>
+							</li>	
+						</ul>
+					</li>
+					<!-- end: Notifications Dropdown -->
+					<!-- start: Message Dropdown -->
+					<li class="dropdown hidden-xs">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="testList.html#">
+							<i class="icon-envelope"></i>
+						</a>
+						<ul class="dropdown-menu messages">
+							<li>
+								<span class="dropdown-menu-title">You have 9 messages</span>
+							</li>	
+                        	<li>
+                                <a href="testList.html#">
+									<span class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></span>
+									<span class="header">
+										<span class="from">
+									    	Mr. Smith
+									     </span>
+										<span class="time">
+									    	6 min
+									    </span>
+									</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="avatar"><img src="assets/img/avatar2.jpg" alt="Avatar"></span>
+									<span class="header">
+										<span class="from">
+									    	Megan Abott
+									     </span>
+										<span class="time">
+									    	56 min
+									    </span>
+									</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="avatar"><img src="assets/img/avatar3.jpg" alt="Avatar"></span>
+									<span class="header">
+										<span class="from">
+									    	Kate Ross
+									     </span>
+										<span class="time">
+									    	3 hours
+									    </span>
+									</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>  
+                                </a>
+                            </li>
+							<li>
+                                <a href="testList.html#">
+									<span class="avatar"><img src="assets/img/avatar4.jpg" alt="Avatar"></span>
+									<span class="header">
+										<span class="from">
+									    	Julie Blank
+									     </span>
+										<span class="time">
+									    	yesterday
+									    </span>
+									</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="testList.html#">
+									<span class="avatar"><img src="assets/img/avatar5.jpg" alt="Avatar"></span>
+									<span class="header">
+										<span class="from">
+									    	Jane Sanders
+									     </span>
+										<span class="time">
+									    	Jul 25, 2012
+									    </span>
+									</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>  
+                                </a>
+                            </li>
+							<li>
+                        		<a class="dropdown-menu-sub-footer">View all messages</a>
+							</li>	
+						</ul>
+					</li>
+					<!-- end: Message Dropdown -->
+					<li>
+						<a class="btn" href="testList.html#">
+							<i class="icon-wrench"></i>
+						</a>
+					</li>
+					<!-- start: User Dropdown -->
+					<li class="dropdown">
+						<a class="btn account dropdown-toggle" data-toggle="dropdown" href="testList.html#">
+							<div class="avatar"><img src="assets/img/avatar.jpg" alt="Avatar"></div>
+							<div class="user">
+								<span class="hello">Welcome!</span>
+								<span class="name">Mr. Smith</span>
+							</div>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-menu-title">
+								
+							</li>
+							<li><a href="testList.html#"><i class="icon-user"></i> Profile</a></li>
+							<li><a href="testList.html#"><i class="icon-cog"></i> Settings</a></li>
+							<li><a href="testList.html#"><i class="icon-envelope"></i> Messages</a></li>
+							<li><a href="login.html"><i class="icon-off"></i> Logout</a></li>
+						</ul>
+					</li>
+					<!-- end: User Dropdown -->
+				</ul>
+			</div>
+			<!-- end: Header Menu -->
+			
+		</div>	
+	</header>
+	<!-- end: Header -->
+	
+		<div class="container">
+		<div class="row">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="col-lg-2 col-sm-1">
+				
+				<input type="text" class="search hidden-sm" placeholder="..." />
+				
+				<div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="testList.html"><i class="icon-bar-chart"></i><span class="hidden-sm"> Dashboard</span></a></li>
+                        <!--
+						<li>
+							<a class="dropmenu" href="testList.html#"><i class="icon-eye-open"></i><span class="hidden-sm"> UI Features</span> <span class="label">3</span></a>
+							<ul>
+								<li><a class="submenu" href="ui-sliders-progress.html"><i class="icon-eye-open"></i><span class="hidden-sm"> Sliders & Progress</span></a></li>
+								<li><a class="submenu" href="ui-nestable-list.html"><i class="icon-eye-open"></i><span class="hidden-sm"> Nestable Lists</span></a></li>
+								<li><a class="submenu" href="ui-elements.html"><i class="icon-eye-open"></i><span class="hidden-sm"> Elements</span></a></li>
+							</ul>
+							</li>
+						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-sm"> Widgets</span></a></li>
+						<li>
+							<a class="dropmenu" href="testList.html#"><i class="icon-folder-close-alt"></i><span class="hidden-sm"> Example Pages</span> <span class="label">3</span></a>
+							<ul>
+								<li><a class="submenu" href="page-infrastructure.html"><i class="icon-hdd"></i><span class="hidden-sm"> Infrastructure</span></a></li>
+								<li><a class="submenu" href="page-inbox.html"><i class="icon-envelope"></i><span class="hidden-sm"> Inbox</span></a></li>
+								<li><a class="submenu" href="page-todo.html"><i class="icon-tasks"></i><span class="hidden-sm"> ToDo & Timeline</span></a></li>
+
+							</ul>	
+						</li>
+						<li>
+							<a class="dropmenu" href="testList.html#"><i class="icon-edit"></i><span class="hidden-sm"> Forms</span> <span class="label">3</span></a>
+							<ul>
+								<li><a class="submenu" href="form-elements.html"><i class="icon-edit"></i><span class="hidden-sm"> Form elements</span></a></li>
+								<li><a class="submenu" href="form-wizard.html"><i class="icon-edit"></i><span class="hidden-sm"> Wizard</span></a></li>
+								<li><a class="submenu" href="form-dropzone.html"><i class="icon-edit"></i><span class="hidden-sm"> Dropzone Upload</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="dropmenu" href="testList.html#"><i class="icon-list-alt"></i><span class="hidden-sm"> Charts</span> <span class="label">3</span></a>
+							<ul>
+								<li><a class="submenu" href="charts-flot.html"><i class="icon-list-alt"></i><span class="hidden-sm"> Flot Charts</span></a></li>
+								<li><a class="submenu" href="charts-xcharts.html"><i class="icon-list-alt"></i><span class="hidden-sm"> xCharts</span></a></li>
+								<li><a class="submenu" href="charts-others.html"><i class="icon-list-alt"></i><span class="hidden-sm"> Other</span></a></li>
+							</ul>
+						
+						</li>
+						<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-sm"> Typography</span></a></li>
+						<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-sm"> Gallery</span></a></li>
+						<li><a href="testList.html"><i class="icon-align-justify"></i><span class="hidden-sm"> Tables</span></a></li>
+						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-sm"> Calendar</span></a></li>
+						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-sm"> File Manager</span></a></li>
+						<li>
+							<a class="dropmenu" href="testList.html#"><i class="icon-star"></i><span class="hidden-sm"> Icons</span> <span class="label">3</span></a>
+							<ul>
+								<li><a class="submenu" href="icons-halflings.html"><i class="icon-star"></i><span class="hidden-sm"> Halflings</span></a></li>
+								<li><a class="submenu" href="icons-glyphicons-pro.html"><i class="icon-star"></i><span class="hidden-sm"> Glyphicons PRO</span></a></li>
+								<li><a class="submenu" href="icons-font-awesome.html"><i class="icon-star"></i><span class="hidden-sm"> Font Awesome</span></a></li>
+							</ul>
+						</li>
+						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-sm"> Login Page</span></a></li>
+                        -->
+					</ul>
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+						
+			<!-- start: Content -->
+			<div id="content" class="col-lg-10 col-sm-11">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="box">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addTestModal">
+                            Add Monitor
+                        </button>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addApigeeTestModal">
+                            Add Apigee Monitor(s)
+                        </button>
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="row">		
+				<div class="col-lg-12">
+					<div class="box">
+						<div class="box-header" data-original-title>
+							<h2><i class="icon-user"></i><span class="break"></span>Monitor List</h2>
+							<div class="box-icon">
+								<a href="testList.html#" class="btn-setting"><i class="icon-wrench"></i></a>
+								<a href="testList.html#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+								<a href="testList.html#" class="btn-close"><i class="icon-remove"></i></a>
+							</div>
+						</div>
+						<div class="box-content">
+
+							<!--<table id="monitorList" class="table table-striped table-bordered bootstrap-datatable datatable">-->
+                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered bootstrap-datatable" id="monitorList"></table>
+                            <!--
+							  <thead>
+								  <tr>
+									  <th>Name</th>
+									  <th>Date Created</th>
+									  <th>Next Run</th>
+									  <th>Status</th>
+									  <th>Actions</th>
+								  </tr>
+							  </thead>   
+							  <tbody id="monitorListRows">
+								<tr>
+									<td>Create User</td>
+									<td class="center">2012/01/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+                                        <span class="label label-success">.</span>
+                                        <span class="label label-success">.</span>
+                                        <span class="label label-important">.</span>
+                                        <span class="label label-success">.</span>
+
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Read User</td>
+									<td class="center">2012/01/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Update User</td>
+									<td class="center">2012/01/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+									</td>
+								</tr>
+								<tr>
+									<td>Delete User</td>
+									<td class="center">2012/01/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Create Profile</td>
+									<td class="center">2012/02/01</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-important">Failed</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Read Profile</td>
+									<td class="center">2012/02/01</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-important">Failed</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Update Profile</td>
+									<td class="center">2012/03/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Delete Profile</td>
+									<td class="center">2012/03/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Create Record</td>
+									<td class="center">2012/01/21</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Read Record</td>
+									<td class="center">2012/01/21</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-success">Success</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Update Record</td>
+									<td class="center">2012/08/23</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-important">Failed</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Delete Record</td>
+									<td class="center">2012/08/23</td>
+									<td class="center">5 Minute</td>
+									<td class="center">
+										<span class="label label-important">Failed</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Facebook Update</td>
+									<td class="center">2012/06/01</td>
+									<td class="center">10 Minute</td>
+									<td class="center">
+										<span class="label label-default">Paused</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Facebook Read User</td>
+									<td class="center">2012/06/01</td>
+									<td class="center">10 Minute</td>
+									<td class="center">
+										<span class="label label-default">Paused</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Facebook Update User</td>
+									<td class="center">2012/03/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Mongo DB Write</td>
+									<td class="center">2012/03/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Mongo DB Read</td>
+									<td class="center">2012/03/01</td>
+									<td class="center">1 Minute</td>
+									<td class="center">
+										<span class="label label-warning">Pending</span>
+									</td>
+									<td class="center">
+										<a class="btn btn-success" href="testList.html#">
+											<i class="icon-zoom-in "></i>
+										</a>
+										<a class="btn btn-info" href="testList.html#">
+											<i class="icon-edit "></i>
+										</a>
+										<a class="btn btn-danger" href="testList.html#">
+											<i class="icon-trash "></i>
+
+										</a>
+									</td>
+								</tr>
+
+							  </tbody>
+
+						  </table>        -->
+						</div>
+					</div>
+				</div><!--/col-->
+			
+			</div><!--/row-->
+
+
+			
+
+			
+
+
+    
+					
+			</div>
+			<!-- end: Content -->
+				
+				</div><!--/row-->		
+		
+	</div><!--/container-->
+	
+		
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Configuration</h4>
+					</div>
+					<div class="modal-body">
+						<p>There will be configuration settings to change the table below in the future.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+
+        <!-- Modal addTestModal -->
+        <div class="modal fade" id="addTestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <!-- modal body -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h2><i class="icon-edit"></i>Add Monitor</h2>
+                                        <div class="box-icon">
+                                            <!--
+                                            <a href="form-elements.html#" class="btn-setting"><i class="icon-wrench"></i></a>
+                                            <a href="form-elements.html#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                                            <a href="form-elements.html#" class="btn-close"><i class="icon-remove"></i></a>
+                                            -->
+                                        </div>
+                                    </div>
+                                    <div class="box-content">
+                                        <form id="singleMonitorAdd" class="form-horizontal" method="post">
+                                            <fieldset class="col-sm-12">
+
+
+                                                <div class="form-group">
+                                                    <label class="control-label" for="focusedInput">Monitor Name</label>
+                                                    <div class="controls">
+                                                        <input class="form-control focused" id="monitorSingleName" type="text" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label" for="focusedInput">Alert Email</label>
+                                                    <div class="controls">
+                                                        <input class="form-control focused" id="monitorSingleEmail" type="text" value="">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label class="control-label" for="selectError">Monitor Interval (minutes)</label>
+                                                    <div class="controls">
+                                                        <select id="monitorSingleInterval" class="form-control" data-rel="chosen">
+                                                            <option value="1">every 1</option>
+                                                            <option value="5">every 5</option>
+                                                            <option value="10">every 10</option>
+                                                            <option value="15">every 15</option>
+                                                            <option value="20">every 20</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label class="control-label" for="textarea2">Frisby.js Code</label>
+                                                    <div class="controls">
+                                                        <textarea id="monitorSingleDefinition" rows="20" style="width:100%">frisby.create('Ensure each tweet has base attributes')
+                                                            .get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=brightbit')
+                                                            .expectStatus(200)
+                                                            .expectHeaderContains('content-type', 'application/json')
+                                                            .expectJSONTypes('*', {
+                                                            id_str: String,
+                                                            retweeted: Boolean,
+                                                            in_reply_to_screen_name: function(val) { expect(val).toBeTypeOrNull(String); }, // Custom matcher callback
+                                                            user: {
+                                                            verified: Boolean,
+                                                            location: String,
+                                                            url: String
+                                                            }
+                                                            })
+                                                            .toss();</textarea>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-actions">
+                                                    <button id="saveMonitor" type="submit" class="btn btn-primary">Save Monitor</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div><!--/col-->
+
+                        </div><!--/row-->
+
+
+
+                        <!-- modal body end -->
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        -->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!-- Apigee test modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="addApigeeTestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <!-- Form Wizard -->
+
+
+                        <div class="row">
+
+                        <div class="col-lg-12">
+                        <div class="box">
+                        <div class="box-header">
+                            <h2><i class="icon-edit"></i>Add Apigee Test</h2>
+                            <div class="box-icon">
+                                <!--
+                                <a href="form-wizard.html#" class="btn-setting"><i class="icon-wrench"></i></a>
+                                <a href="form-wizard.html#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                                <a href="form-wizard.html#" class="btn-close"><i class="icon-remove"></i></a>
+                                -->
+                            </div>
+                        </div>
+                        <div class="box-content">
+                        <div id="MyWizard" class="wizard">
+                            <ul class="steps">
+                                <li data-target="#step1" class="active"><span class="badge badge-info">1</span></li>
+                                <li data-target="#step2"><span class="badge">2</span></li>
+                                <li data-target="#step3"><span class="badge">3</span></li>
+                            </ul>
+                            <div class="actions">
+                                <button type="button" class="btn btn-prev"> <i class="icon-arrow-left"></i> Prev</button>
+                                <button type="button" class="btn btn-success btn-next" data-last="Finish">Next <i class="icon-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                        <div class="step-pane active" id="step1">
+                            <form class="form-horizontal">
+
+
+                                <div class="alert alert-info">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    This URL points to your Apigee WADL file which describe all the REST endpoints belonging to your account.
+                                </div>
+
+
+                                <fieldset class="col-sm-12">
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="focusedInput">Internal Apigee URL:</label>
+                                        <div class="controls">
+                                            <input class="form-control focused" id="focusedInput" type="text" value="http://autodevbot.apigee.com">
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="step-pane" id="step2">
+                            <form class="form-horizontal">
+                                <fieldset class="col-sm-12">
+
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        These are the endpoints pulled back from your Apigee account.
+                                    </div>
+
+
+
+                                    <div class="box">
+                                        <div class="box-header">
+                                            <h2><i class="icon-align-justify"></i><span class="break"></span>Your Endpoint List</h2>
+                                            <div class="box-icon">
+                                                <!--
+                                                <a href="table.html#" class="btn-setting"><i class="icon-wrench"></i></a>
+                                                <a href="table.html#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                                                <a href="table.html#" class="btn-close"><i class="icon-remove"></i></a>
+                                                -->
+                                            </div>
+                                        </div>
+                                        <div class="box-content">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Select</th>
+                                                    <th>Method</th>
+                                                    <th>Name</th>
+                                                    <th>URL</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+                                                    <td class="center">POST</td>
+                                                    <td class="center">GET User</td>
+                                                    <td class="center">/user/{id}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+                                                    <td class="center">POST</td>
+                                                    <td class="center">GET User</td>
+                                                    <td class="center">/user/{id}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+                                                    <td class="center">POST</td>
+                                                    <td class="center">GET User</td>
+                                                    <td class="center">/user/{id}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+                                                    <td class="center">POST</td>
+                                                    <td class="center">GET User</td>
+                                                    <td class="center">/user/{id}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+                                                    <td class="center">POST</td>
+                                                    <td class="center">GET User</td>
+                                                    <td class="center">/user/{id}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="step-pane" id="step3">
+                            <form class="form-horizontal">
+                                <fieldset class="col-sm-12">
+
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        Add in the values that you want to test this endpoint with.
+                                    </div>
+
+
+                                    <div class="box-content">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Value</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="center">id</td>
+                                                <td class="center">
+                                                    <div class="controls">
+                                                        <input class="form-control focused" id="focusedInput" type="text" value="id">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">name</td>
+                                                <td class="center">
+                                                    <div class="controls">
+                                                        <input class="form-control focused" id="focusedInput" type="text" value="user name">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        </div>
+
+                        </div>
+
+                        </div>
+
+                        </div><!--/col-->
+
+                        </div><!--/row-->
+
+
+
+                        <!-- End Form Wizard -->
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+
+	
+	<div class="clearfix"></div>
+	
+	<footer>
+		<p>
+			<span style="text-align:left;float:left">&copy; 2013 <a href="http://bootstrapmaster.com" alt="Bootstrap Themes">AutoDevBot</a></span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co" alt="Bootstrap Admin Templates">SoftLayer</a></span>
+		</p>
+
+	</footer>
+	
+	<!-- start: JavaScript-->
+	<!--[if !IE]>-->
+
+			<script src="assets/js/jquery-2.0.3.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script src="assets/js/jquery-1.10.2.min.js"></script>
+	
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			</script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		
+	<![endif]-->
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	
+		
+	
+	
+	<!-- page scripts -->
+	<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="assets/js/jquery.sparkline.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/wizard.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="assets/js/custom.min.js"></script>
+	<script src="assets/js/core.min.js"></script>
+	
+	<!-- inline scripts related to this page -->
+	<script src="assets/js/pages/table.js"></script>
+	
+	<!-- end: JavaScript-->
+
+    <script>
+
+        $( document ).ready(function() {
+
+            populateMonitorListTable();
+        });
+
+        /**
+         * Populate Monitor List Table
+         */
+        function populateMonitorListTable(){
+            $.get( "http://166.78.10.16:8080/monitor", function( data ) {
+
+                var tableData = {
+                    "aaData": [
+                        /* Reduced data set */
+                        //[ "Trident", "Internet Explorer 4.0", "Win 95+", 4, "X" ],
+                        //[ "Trident", "Internet Explorer 5.0", "Win 95+", 5, "C" ]
+                    ],
+                    "aoColumns": [
+                        { "sTitle": "Name" },
+                        { "sTitle": "Date Created" },
+                        { "sTitle": "Next Run", "sClass": "center" },
+                        { "sTitle": "Status", "sClass": "center" },
+                        { "sTitle": "Action", "sClass": "center" },
+                    ]
+                };
+
+                // Load monitor list
+                var r = new Array(), j = -1;
+
+                for (var key=0, size=data.length; key<size; key++){
+
+                    var statusTemp = '<span class="label label-success">Success</span><span class="label label-success">.</span><span class="label label-success">.</span><span class="label label-important">.</span><span class="label label-success">.</span>';
+                    var rowAction = '<a class="btn btn-success" href="testList.html#"><i class="icon-zoom-in "></i></a><a class="btn btn-info" href="testList.html#"><i class="icon-edit "></i></a><button class="btn btn-danger" onclick="deleteMonitor('+key+','+data[key].id+')"><i class="icon-trash "></i></a>';
+
+                    var temp = [data[key].name, data[key].datetime_created, data[key].interval, statusTemp, rowAction];
+
+                    tableData.aaData.push(temp);
+                }
+
+                //alert(tableData.aaData[0][0]);
+
+                //$('#monitorList').fnClearTable();
+                $('#monitorList').dataTable(tableData);
+
+            });
+        }
+
+
+        /**
+         * Saving a monitor
+         */
+        $(function(){
+            $('#saveMonitor').click(function(e){
+                e.preventDefault();
+
+                 $.post('http://166.78.10.16:8080/monitor',
+                    //$('#singleMonitorAdd').serialize(),
+                         {
+                             name:$('#monitorSingleName').val(),
+                             email:$('#monitorSingleEmail').val(),
+                             interval:$('#monitorSingleInterval').val(),
+                             description:$('#monitorSingleDescription').val(),
+                             definition:$('#monitorSingleDefinition').val()
+                         },
+                 function(data, status, xhr){
+                 // do something here with response;
+                     //populateMonitorListTable();
+                     var statusTemp = '<span class="label label-success">Success</span><span class="label label-success">.</span><span class="label label-success">.</span><span class="label label-important">.</span><span class="label label-success">.</span>';
+                     var rowAction = '<a class="btn btn-success" href="testList.html#"><i class="icon-zoom-in "></i></a><a class="btn btn-info" href="testList.html#"><i class="icon-edit "></i></a><a class="btn btn-danger" href="testList.html#"><i class="icon-trash "></i></a>';
+
+                     $('#monitorList').dataTable().fnAddData(
+                             [
+                                 $('#monitorSingleName').val(),
+                                 $('#monitorSingleEmail').val(),
+                                 $('#monitorSingleInterval').val(),
+                                 statusTemp,
+                                 rowAction
+                             ]
+                     );
+                     $('#addTestModal').modal('hide');
+                 })
+                         .done(function(){
+                             $('#addTestModal').modal('hide');
+                         })
+                         .fail(function(){
+                             //alert('fail');
+                         })
+                         .always(function(){
+
+                             //alert('always');
+                             $('#addTestModal').modal('hide');
+                         })
+                         .error(function(a, b, c){
+                             //alert(a.StatusCode);
+                         })
+                 ;
+
+            });
+        });
+
+        /**
+         * Delete a monitor
+         */
+        function deleteMonitor(row, id){
+
+            $.ajax({
+                url: 'http://166.78.10.16:8080/monitor/'+id,
+                type: 'DELETE',
+                success: function(response){
+                    console.log('DELETE completed'+response);
+
+                    //$('#monitorList').fnDeleteRow(row);
+                    alert('success');
+
+                },
+                error: function(response){
+                    alert('error');
+                }
+            });
+
+
+        }
+
+
+    </script>
+	
+</body>
+</html>
