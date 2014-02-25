@@ -36,6 +36,7 @@
           .forest{background-position:center;background-image:url("assets/images/carousels/forest.jpg")}
       </style>
 
+      <!-- Google Analytics -->
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,6 +46,21 @@
           ga('create', 'UA-46781574-1', 'autodevbot.com');
           ga('send', 'pageview');
 
+      </script>
+
+      <!-- KissMetrics -->
+      <script type="text/javascript">var _kmq = _kmq || [];
+      var _kmk = _kmk || '3adbaa1051cf24981e86ad2814599d8ad4a29027';
+      function _kms(u){
+          setTimeout(function(){
+              var d = document, f = d.getElementsByTagName('script')[0],
+                      s = d.createElement('script');
+              s.type = 'text/javascript'; s.async = true; s.src = u;
+              f.parentNode.insertBefore(s, f);
+          }, 1);
+      }
+      _kms('//i.kissmetrics.com/i.js');
+      _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
       </script>
 
   </head>
@@ -61,35 +77,29 @@
                 <span class='icon-bar'></span>
               </button>
               <a class='navbar-brand' href='index.html'>
-                AutoDevBot.com
+                  <img alt="AutoDevBot" src="assets/images/AutoDevBot_logo3_small.png" />
               </a>
             </div>
             <div class='collapse navbar-collapse navbar-header-collapse'>
               <ul class='nav navbar-nav navbar-right'>
 
-                <!--
                 <li class='active dropdown'>
                   <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
                     <span>
-                      Home
+                      Social
                       <i class='fa-icon-angle-down'></i>
                     </span>
                   </a>
                   <ul class='dropdown-menu' role='menu'>
                     <li class=' dropdown-submenu'>
-                      <a href='index.html'>Home</a>
-                    </li>
-                    <li class='active'>
-                      <a href='index2.html'>Home 2</a>
+                      <a href='http://blog.autodevbot.com'>Blog</a>
                     </li>
                     <li class=''>
-                      <a href='index3.html'>Home 3</a>
-                    </li>
-                    <li class=''>
-                      <a href='boxed.html'>Boxed layout</a>
+                      <a href='https://twitter.com/AutoDevBot'>Twitter</a>
                     </li>
                   </ul>
                 </li>
+                  <!--
                 <li class='dropdown'>
                   <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
                     <span>
@@ -312,7 +322,7 @@
           <div class='container'>
             <div class='row'>
               <div class='col-sm-12'>
-                <p class='lead lead-lg text-center'><strong>AutoDevBot makes it easy for you to monitor all of your API endpoints running your application stack. </strong></p>
+                <p class='lead lead-lg text-center'><strong>AutoDevBot makes it easy for you to monitor all of your API endpoints. </strong></p>
               </div>
             </div>
             <div class='panels-wrapper'>
@@ -323,7 +333,7 @@
                       <i class='fa-icon-time icon'></i>
                     </div>
                     <div class='panel-body'>
-                      <h3 class='panel-title'>Is all of your API endpoints working properly?</h3>
+                      <h3 class='panel-title'>Are all of your API endpoints working properly?</h3>
                       <p>Applications are getting more complex with internal and external API interactions between various servers and processes.  The response from your APIs represent your application stack.  Keeping track of what is acceptable behavior is paramount to keeping a healthy system going.</p>
                     </div>
                   </a>
@@ -366,21 +376,31 @@
                               <!--<div class='col-sm-6 col-sm-push-6'><img class="img-responsive center-block" alt="Praesent vitae adipiscing nunc" width="330" height="183" src="http://placehold.it/330x183" /></div>-->
                               <div class='col-sm-6 col-sm-push-6'>
                                   <textarea id="code" name="code">
-frisby.create('Ensure test has foo and bar')
-    .get('http://api.AutoDevBot.com/get?foo=bar&bar=baz')
-        .expectJSON({
-            args: {
-                foo: 'bar',
-                bar: 'baz'
-            }
-        })
-    .toss()
+frisby.create('User GET')
+    .get('http://test.AutoDevBot.com/sample')
+    .expectStatus(200)
+    .expectHeaderContains('content-type', 'application/json')
+    .expectJSONTypes(
+        {
+            "user_name":String,
+            "has_credit_card":Boolean,
+            "age":Number
+        }
+    )
+    .toss();
                                   </textarea>
 
                               </div>
                               <div class='col-sm-6 col-sm-pull-6'>
-                                  <h3 class='title'><a href="#">Frisby.js Code:</a></h3>
-                                  <p>Its simple, clone our existing examples from our github repo and modify it to point to your own API.  With a few changes you can have AutoDevBot monitoring. </p>
+                                  <!--<h3 class='title'><a href="#">Frisby.js Code:</a></h3>-->
+                                  <p>We are making it dead simple to use so that you can get up and running in matter of minutes.</p>
+                                  <ol>
+                                      <li>You can simply clone our example GitHub repo and start from there.</li>
+                                      <li>Change it to point to your API and the specifics of what you want to check.</li>
+                                      <li>Share this repo with AutoDevBot</li>
+                                  </ol>
+                                  <p>AutoDevBot will automatically pull this GitHub repo in and start monitoring.  The only other thing left for you to do is to provide an email or a callback URL to AutoDevBot so that it can send notifications when there is an failure event.</p>
+                                  <p>Here is the link our sample repository.  It is a great place to start building monitoring tests.</p>
                                   <a class='btn btn-contrast btn-bordered btn-sm' href="https://github.com/AutoDevBot/monitor-examples">Clone Sample Code</a>
                               </div>
                           </div>
@@ -651,9 +671,12 @@ frisby.create('Ensure test has foo and bar')
                       <i class='fa-icon-map-marker'></i>
                     </div>
                     <div class='content'>
+                      <a href="https://goo.gl/maps/ZbnCh">
+                      Citizen Space <br/>
                       425 2nd St #100,
                       <br>
                       San Francisco, CA 94107
+                      </a>
                     </div>
                   </div>
                   <div class='icon-box'>
@@ -664,11 +687,17 @@ frisby.create('Ensure test has foo and bar')
                       <a href='tel:+(415) 275-0321'>(415) 275-0321</a>
                     </div>
                   </div>
+                    <div class='icon-box'>
+                        <div class='icon icon-wrap'>
+                            <i class='fa-icon-envelope'></i>
+                        </div>
+                        <div class='content'><a href="mailto:info@AutoDevBot.com">info@AutoDevBot.com</a></div>
+                    </div>
                   <div class='icon-box'>
                     <div class='icon icon-wrap'>
-                      <i class='fa-icon-envelope'></i>
+                      <i class='fa-icon-twitter'></i>
                     </div>
-                    <div class='content'><a href="mailto:info@bublinastudio.com">info@AutoDevBot.com</a></div>
+                    <div class='content'><a href="https://twitter.com/AutoDevBot">Twitter.com/AutoDevBot.com</a></div>
                   </div>
                   <div class='icon-box'>
                     <div class='icon icon-wrap'>
@@ -765,12 +794,14 @@ frisby.create('Ensure test has foo and bar')
                 <p class='copyright'>
                   Copyright
                   &copy;
-                  2013 AutoDevBot.com
+                  2014 AutoDevBot.com
                 </p>
+                  <!--
                 <div class='links'>
                   <a class='btn btn-circle btn-medium-light btn-sm' href='https://twitter.com/AutoDevBot'>
                     <i class='fa-icon-twitter text-dark'></i>
                   </a>
+                  -->
                     <!--
                   <a class='btn btn-circle btn-medium-light btn-sm' href='#'>
                     <i class='fa-icon-dribbble text-dark'></i>
@@ -819,6 +850,16 @@ frisby.create('Ensure test has foo and bar')
 
 
     </script>
+
+    <!-- CrazyEgg -->
+    <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/5164.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+
+
 
   </body>
 </html>

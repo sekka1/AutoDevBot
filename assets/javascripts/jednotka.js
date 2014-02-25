@@ -249,7 +249,7 @@
      * ajax contact form
      * --------------------------------------------------------------------------------------------------------------------
     */
-/*
+
     return $(".form-contact").on("submit", function(e) {
       var error, inputs, submit, success;
       if ($(this).valid()) {
@@ -261,7 +261,7 @@
         inputs = $(this).find("input, textarea");
         return $.ajax({
           type: "POST",
-          url: "http://AutoDevBot.us7.list-manage.com/subscribe/post?u=23e025f724cd533f089201f12&amp;id=bfb6db4c3d",
+          url: "contact.php",
           data: $(this).serialize(),
           success: function(data) {
             if (data === "success") {
@@ -280,7 +280,7 @@
       }
     });
   });
-*/
+
   /*
   * --------------------------------------------------------------------------------------------------------------------
   * form validation
