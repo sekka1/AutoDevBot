@@ -254,14 +254,14 @@
                         <div class='row'>
                             <div class='col-sm-12'>
                                 <div class='form-group control-group'>
-                                    <input class='form-control' data-rule-required='true' name='password1' placeholder='Password' type='password'>
+                                    <input class='form-control' data-rule-required='true' name='password' placeholder='Password' type='password'>
                                 </div>
                             </div>
                         </div>
                         <div class='row'>
                             <div class='col-sm-12'>
                                 <div class='form-group control-group'>
-                                    <input class='form-control' data-rule-required='true' name='password2' placeholder='Re-type your password' type='password'>
+                                    <input class='form-control' data-rule-required='false' name='github_user' placeholder='Github User Name' type='text'>
                                 </div>
                             </div>
                         </div>
@@ -401,10 +401,9 @@
         $('#blockG_3').hide();
 
         $( "#signup" ).click(function() {
-            //alert( "Handler for .click() called." );
 
             $.ajax({
-                url: 'http://api.autodevbot.com/signup',
+                url: 'http://api.autodevbot.com/v1.0/signup',
                 type: 'post',
                 data: $('form#signupForm').serialize(),
                 beforeSend: function(msg){
@@ -417,19 +416,25 @@
                 success: function(response) {
                     console.log(response);
 
-                    if(response.status=='success'){
-                        console.log('success signup');
-                        window.location.href = "http://dashboard.autodevbot.com/dashboard.html";
-                    }
-                    if(response.status=='failed'){
-                        console.log('failed signup');
+                    var returnObj = JSON.parse(response);
+
+                    console.log('user_id: '+returnObj.user_id);
+                    console.log('message: '+returnObj.message);
+                    console.log('created: '+returnObj.created);
+
+                    if(returnObj.created){
+                        // Was successful creating a user
+
+                        window.location.href = 'http://dashboard.autodevbot.com/live.html?user_id='+returnObj.user_id;
+                    }else if(!returnObj.created){
+                        console.log('There was an error signing up');
 
                         $('#signupForm').show();
                         $('#blockG_1').hide();
                         $('#blockG_2').hide();
                         $('#blockG_3').hide();
 
-                        alert(response.message);
+                        alert(returnObj.message);
                     }
                 },
                 error: function (request, status, error) {
@@ -437,10 +442,7 @@
                 }
             });
             return false; // prevent page reload
-
-
         });
-
     });
 
 
