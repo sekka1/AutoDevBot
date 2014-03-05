@@ -403,7 +403,7 @@
         $( "#signup" ).click(function() {
 
             $.ajax({
-                url: 'http://api.autodevbot.com/v1.0/signup',
+                url: 'https://api.autodevbot.com/v1.0/signup',
                 type: 'post',
                 data: $('form#signupForm').serialize(),
                 beforeSend: function(msg){
@@ -425,7 +425,7 @@
                     if(returnObj.created){
                         // Was successful creating a user
 
-                        window.location.href = 'http://dashboard.autodevbot.com/live.html?user_id='+returnObj.user_id;
+                        window.location.href = 'https://api.autodevbot.com/dashboard/live.html?user_id='+returnObj.user_id+'&temp_key=ZaVnC4dhaV3vlgx0GUHv9SgHmTchlQ85WpN';
                     }else if(!returnObj.created){
                         console.log('There was an error signing up');
 
