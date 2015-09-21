@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 9]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if !IE] -->
+<html lang='en'>
+  <!-- <![endif] -->
+  <head>
+    <title>AutoDevBot</title>
+    <meta content='API, Testing, Monitoring, SaaS, Service' name='keywords'>
+    <meta content='Monitor all of your APIs - Internal & External ' name='description'>
+    <meta content='AutoDevBot.com' name='author'>
+    <meta content='all' name='robots'>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <!--[if IE]> <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'> <![endif]-->
+    <link href='assets/images/meta_icons/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='assets/images/meta_icons/apple-touch-icon.png' rel='apple-touch-icon-precomposed'>
+    <!-- / required stylesheets -->
+    <link href="assets/stylesheets/bootstrap/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/jednotka_green.css" media="all" id="colors" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="assets/javascripts/ie/html5shiv.js" type="text/javascript"></script>
+      <script src="assets/javascripts/ie/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+
+      <!--code mirror-->
+      <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
+      <link rel="stylesheet" href="assets/codemirror/theme/ambiance.css">
+      <script src="assets/codemirror/lib/codemirror.js"></script>
+      <script src="assets/codemirror/mode/javascript/javascript.js"></script>
+
+      <style type="text/css">
+          p {
+              font-size: 18px;
+          }
+          .forest{background-position:center;background-image:url("assets/images/carousels/forest.jpg")}
+      </style>
+
+      <!-- Google Analytics -->
+      <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46781574-1', 'autodevbot.com');
+          ga('send', 'pageview');
+
+      </script>
+
+      <!-- KissMetrics -->
+      <script type="text/javascript">var _kmq = _kmq || [];
+      var _kmk = _kmk || '3adbaa1051cf24981e86ad2814599d8ad4a29027';
+      function _kms(u){
+          setTimeout(function(){
+              var d = document, f = d.getElementsByTagName('script')[0],
+                      s = d.createElement('script');
+              s.type = 'text/javascript'; s.async = true; s.src = u;
+              f.parentNode.insertBefore(s, f);
+          }, 1);
+      }
+      _kms('//i.kissmetrics.com/i.js');
+      _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+      </script>
+
+  </head>
+  <body class='homepage fullsize'>
+    <div id='wrapper'>
+      <header id='header'>
+        <div class='container'>
+          <nav class='navbar navbar-default' id='nav' role='navigation'>
+            <div class='navbar-header'>
+              <button class='navbar-toggle' data-target='.navbar-header-collapse' data-toggle='collapse' type='button'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+              </button>
+              <a class='navbar-brand' href='index.html'>
+                  <img alt="AutoDevBot" src="assets/images/AutoDevBot_logo3_small.png" />
+              </a>
+            </div>
+            <div class='collapse navbar-collapse navbar-header-collapse'>
+              <ul class='nav navbar-nav navbar-right'>
+
+                <li class='active dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Social
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=' dropdown-submenu'>
+                      <a href='http://blog.autodevbot.com'>Blog</a>
+                    </li>
+                    <li class=''>
+                      <a href='https://twitter.com/AutoDevBot'>Twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Login
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=''>
+                      <a href='https://api.autodevbot.com/dashboard/login.html'>Login</a>
+                    </li>
+                    <li class=''>
+                      <a href='signup.html'>Sign Up</a>
+                    </li>
+                  </ul>
+                </li>
+                  <!--
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Features
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=''>
+                      <a href='animations.html'>Animations</a>
+                    </li>
+                    <li class=''>
+                      <a href='elements.html'>Elements</a>
+                    </li>
+                    <li class=''>
+                      <a href='icons.html'>Icons</a>
+                    </li>
+                    <li class=''>
+                      <a href='forms.html'>Forms</a>
+                    </li>
+                    <li class=''>
+                      <a href='tables.html'>Tables</a>
+                    </li>
+                    <li class=''>
+                      <a href='typography.html'>Typography</a>
+                    </li>
+                    <li class=''>
+                      <a href='pricing_tables.html'>Pricing tables</a>
+                    </li>
+                    <li class='dropdown-submenu'>
+                      <a href='index.html'>
+                        Submenu
+                        <i class='fa-icon-angle-right'></i>
+                      </a>
+                      <ul class='dropdown-menu' role='menu'>
+                        <li>
+                          <a href='index.html'>Submenu item</a>
+                        </li>
+                        <li>
+                          <a href='index.html'>Submenu item</a>
+                        </li>
+                        <li>
+                          <a href='index.html'>Submenu item</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Blog
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=''>
+                      <a href='blog_small.html'>Small image</a>
+                    </li>
+                    <li class=''>
+                      <a href='blog_large.html'>Large image</a>
+                    </li>
+                    <li class=''>
+                      <a href='blog_single_post.html'>Single post</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Portfolio
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=''>
+                      <a href='portfolio.html'>2 columns</a>
+                    </li>
+                    <li class=''>
+                      <a href='portfolio_three_cols.html'>3 columns</a>
+                    </li>
+                    <li class=''>
+                      <a href='portfolio_four_cols.html'>4 columns</a>
+                    </li>
+                    <li class=''>
+                      <a href='portfolio_detail.html'>Project detail</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-delay='50' data-hover='dropdown' data-toggle='dropdown' href='#'>
+                    <span>
+                      Contact
+                      <i class='fa-icon-angle-down'></i>
+                    </span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li class=''>
+                      <a href='contact.html'>Contact</a>
+                    </li>
+                    <li class=''>
+                      <a href='contact2.html'>Contact 2</a>
+                    </li>
+                    <li class=''>
+                      <a href='contact3.html'>Contact 3</a>
+                    </li>
+                  </ul>
+                </li>
+                -->
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div id='main' role='main'>
+        <!-- / carousel contrast -->
+        <div class='hero-carousel carousel-contrast carousel-contrast-arrows carousel-contrast-pagination flexslider' id='carousel-example-2'>
+          <ul class='slides'>
+            <li class='item forest'>
+              <div class='container'>
+                <div class='row'>
+                  <div class='col-lg-12 animate'>
+                    <h1 class='big fadeInUp animated'>
+                      <span>
+                        Startup DevOps Packages
+                      </span>
+                    </h1>
+                    <p class='normal fadeInUp animated'>
+                      <span>We provide you various packages to get your startup running in the cloud with a fully automated workflow</span>
+                    </p>
+                    <p class='fadeInRight animated'>
+                      <a class='btn btn-squared btn-contrast btn-lg' href='#' onclick="$('html, body').animate({scrollTop: $('#signUp-section').offset().top}, 2000);">
+                        Sign Up
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+              <!--
+            <li class='item forest'>
+              <div class='container'>
+                <div class='row'>
+                  <div class='col-lg-12 animate'>
+                    <h2 class='big fadeInLeftBig animated'>
+                      <span>
+                        Already integrated with your favorite services
+                      </span>
+                    </h2>
+                    <p class='normal fadeInRightBig animated'>
+                      <span><img src="assets/images/integration_logos/all.png"/> and more coming</span>
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            -->
+
+               <!--
+            <li class='item bokeh'>
+              <div class='container'>
+                <div class='row'>
+                  <div class='col-lg-12 animate'>
+                    <h2 class='big fadeInRightBig animated'>
+                      <span>Based on Twitter Bootstrap</span>
+                    </h2>
+                    <p class='normal fadeInLeftBig animated'>
+                      <span>Nam nec tellus molestie, sollicitudin.</span>
+                    </p>
+                    <p class='fadeInUpBig animated'>
+                      <a class='btn btn-squared btn-contrast btn-lg' href='#'>
+                        Show more
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+                -->
+          </ul>
+        </div>
+        <div id='main-content'>
+          <div class='container'>
+
+          <div class='row' id="signUp-section">
+
+              <div class='col-sm-12'>
+                  <p class='lead lead-lg text-center'><strong>Join the beta and get a free account for one year! </strong></p>
+              </div>
+
+              <div class='col-md-12'>
+                  <form action="http://AutoDevBot.us7.list-manage.com/subscribe/post?u=23e025f724cd533f089201f12&amp;id=bfb6db4c3d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div class='row'>
+                          <div class='col-sm-12'>
+                              <div class='alert alert-success form-contact-success hidden'>Thanks! Your message has been successfully sent!</div>
+                              <div class='alert alert-danger form-contact-error hidden'>Ooops! There was an error sending your message.</div>
+                          </div>
+                      </div>
+                      <div class='row'>
+                          <div class='col-sm-6'>
+                              <div class='form-group control-group'>
+                                  <input class='form-control' data-rule-required='true' name='FNAME' placeholder='First Name' type='text'>
+                                  <input class='form-control' data-rule-required='true' name='LNAME' placeholder='Last Name' type='text'>
+                                  <input class='form-control' name='human' placeholder='Are you human?' style='display: none;' type='text'>
+                              </div>
+                          </div>
+                          <div class='col-sm-6'>
+                              <div class='form-group control-group'>
+                                  <input class='form-control' data-rule-email='true' data-rule-required='true' name='EMAIL' placeholder='E-Mail' type='email'>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class='row'>
+                          <div class='col-sm-6 col-md-offset-3'>
+                              <button class='btn btn-contrast btn-block form-contact-submit' data-loading-text="&lt;i class='fa-icon-refresh fa-icon-spin'&gt;&lt;/i&gt; Sending..." type='submit'>
+                                  Join Private Beta!
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+              <div class='row'>
+                  <div class='col-sm-12'>
+                      <div class='page-header page-header-with-icon'>
+                          <i class='fa-icon-star'></i>
+                          <h2>Services</h2>
+                      </div>
+                      <div class='text-boxes'>
+                          <div class='row text-box'>
+                              <div class='col-sm-6'><img class="img-responsive center-block" alt="Lorem ipsum dolor sit amet" width="340" height="188" src="http://placehold.it/340x188" /></div>
+                              <div class='col-sm-6'>
+                                  <h3 class='title'><a href="#">CloudFormation Creation</a></h3>
+                                  <p>We’ll create a custom CloudFormation template so you can run any application on Amazon Web Services. With this CloudFormation Template, you can create multiple environments.  For example, you can create one for Production with many nodes, plus a few smaller environments for development, QA, or performance testing.</p>
+                                  <p>CloudFormation Template Features:</p>
+                                  <ul>
+                                      <li type="square">VPC</li>
+                                      <li type="square">Public and private subnets</li>
+                                      <li type="square">3 availability zones</li>
+                                      <li type="square">Security Groups</li>
+                                      <li type="square">Can be used in any AWS region</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class='row text-box'>
+                              <div class='col-sm-6 col-sm-push-6'><img class="img-responsive center-block" alt="Praesent vitae adipiscing nunc" width="330" height="183" src="http://placehold.it/330x183" /></div>
+                              <div class='col-sm-6 col-sm-pull-6'>
+                                  <h3 class='title'><a href="#">Dockerize an Application</a></h3>
+                                  <p>We will help you transform your application* into a Docker container so that it can be easily deployed out to the CoreOS nodes created by the CloudFormation template.</p>
+                                  <!--<a class='btn btn-contrast btn-bordered btn-sm' href='#'>Read more</a>-->
+                              </div>
+                          </div>
+
+                          <hr>
+
+                          <div class='row text-box'>
+                              <div class='col-sm-6'><img class="img-responsive center-block" alt="Lorem ipsum dolor sit amet" width="340" height="188" src="http://placehold.it/340x188" /></div>
+                              <div class='col-sm-6'>
+                                  <h3 class='title'><a href="#">Automated Deployment</a></h3>
+                                  <p>We will provide you with a set of tools (and documentation) so you can easily deploy code into your environments.</p>
+                                  <p>Automated Deployment Tools:</p>
+                                  <ul>
+                                      <li type="square">Container building, tagging, and pushing</li>
+                                      <li type="square">Deployment of containers into an environment</li>
+                                      <li type="square">Rolling updates deployment</li>
+                                      <li type="square">Local development setup</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class='row text-box'>
+                              <div class='col-sm-6 col-sm-push-6'><img class="img-responsive center-block" alt="Praesent vitae adipiscing nunc" width="330" height="183" src="http://placehold.it/330x183" /></div>
+                              <div class='col-sm-6 col-sm-pull-6'>
+                                  <h3 class='title'><a href="#">Logging</a></h3>
+                                  <p>Viewing logs is critical to running and troubleshooting a cloud application.  We offer a few options for central log aggregation with a web interface for easy log management.</p>
+                                  <p>Features:</p>
+                                  <ul>
+                                      <li type="square">Multi user access</li>
+                                      <li type="square">Searching/querying</li>
+                                      <li type="square">Alert creation based on searches</li>
+                                      <li type="square">Building dashboards</li>
+                                  </ul>
+                                  <p>Log Vendor Options:</p>
+                                  <ul>
+                                      <li type="square">Loggly.com</li>
+                                      <li type="square">LogEntries.com</li>
+                                      <li type="square">GrayLog</li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                          <hr>
+
+                          <div class='row text-box'>
+                              <div class='col-sm-6'><img class="img-responsive center-block" alt="Lorem ipsum dolor sit amet" width="340" height="188" src="http://placehold.it/340x188" /></div>
+                              <div class='col-sm-6'>
+                                  <h3 class='title'><a href="#">Server Monitoring</a></h3>
+                                  <p>Gain visibility into your entire server environment</p>
+                                  <p>We monitor your servers using New Relic Server Monitoring (a free service).  This provides metrics on:</p>
+                                  <ul>
+                                      <li type="square">CPU usage</li>
+                                      <li type="square">Memory usage</li>
+                                      <li type="square">Hard disk usage</li>
+                                      <li type="square">Server processes</li>
+                                      <li type="square">Docker containers</li>
+                                  </ul>
+                              </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+              </div>
+
+
+              <hr>
+
+              <!-- Pricing Table -->
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <h4 class="text-center">
+                                  STARTER PLAN</h4>
+                          </div>
+                          <div class="panel-body text-center">
+                              <p class="lead">
+                                  <strong>$1000</strong></p>
+                          </div>
+                          <ul class="list-group list-group-flush text-center">
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>CloudFormation Creation - full infrastructure creation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Dockerize 1 application</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Automated deployment onto a CoreOS Cluster</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Log Rotation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>-</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>-</li>
+                          </ul>
+                          <div class="panel-footer">
+                              <a class="btn btn-lg btn-block btn-default" href="#">BUY NOW!</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">
+                              <h4 class="text-center">
+                                  STANDARD PLAN</h4>
+                          </div>
+                          <div class="panel-body text-center">
+                              <p class="lead">
+                                  <strong>$2000</strong></p>
+                          </div>
+                          <ul class="list-group list-group-flush text-center">
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>CloudFormation Creation - full infrastructure creation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Dockerize 1 application</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Automated deployment onto a CoreOS Cluster</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Log Rotation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Logging with Loggly or LogEntries</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Server monitoring with New Relic</li>
+                          </ul>
+                          <div class="panel-footer">
+                              <a class="btn btn-lg btn-block btn-primary" href="#">BUY NOW!</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="panel panel-success">
+                          <div class="panel-heading">
+                              <h4 class="text-center">
+                                  PRO PLAN</h4>
+                          </div>
+                          <div class="panel-body text-center">
+                              <p class="lead">
+                                  <strong>$3000</strong></p>
+                          </div>
+                          <ul class="list-group list-group-flush text-center">
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>CloudFormation Creation - full infrastructure creation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Dockerize 1 application</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Automated deployment onto a CoreOS Cluster</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Log Rotation</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Logging with Loggly or LogEntries</li>
+                              <li class="list-group-item"><i class="icon-ok text-danger"></i>Server monitoring with New Relic</li>
+                          </ul>
+                          <div class="panel-footer">
+                              <a class="btn btn-lg btn-block btn-success" href="#">BUY
+                                  NOW!</a>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+              <!-- end pricing table -->
+
+
+
+
+<!--
+            <div class='row' id="signUp-section">
+                <div class='col-md-12'>
+                    <div class='page-header page-header-with-icon'>
+                        <i class='fa-icon-question-sign'></i>
+                        <h2>Let me know when it is available!</h2>
+                        <p>We are targeting beta trials late Feb 2014</p>
+                    </div>
+                    <form class='form form-validation form-contact' method='post'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='alert alert-success form-contact-success hidden'>Thanks! Your message has been successfully sent!</div>
+                                <div class='alert alert-danger form-contact-error hidden'>Ooops! There was an error sending your message.</div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <div class='form-group control-group'>
+                                    <input class='form-control' data-rule-required='true' name='name' placeholder='Name' type='text'>
+                                    <input class='form-control' name='human' placeholder='Are you human?' style='display: none;' type='text'>
+                                </div>
+                            </div>
+                            <div class='col-sm-6'>
+                                <div class='form-group control-group'>
+                                    <input class='form-control' data-rule-email='true' data-rule-required='true' name='email' placeholder='E-Mail' type='email'>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='col-sm-6 col-md-offset-3'>
+                                <button class='btn btn-contrast btn-block form-contact-submit' data-loading-text="&lt;i class='fa-icon-refresh fa-icon-spin'&gt;&lt;/i&gt; Sending..." type='submit'>
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+-->
+
+
+
+
+            <!--
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='page-header page-header-with-icon'>
+                    <i class='fa-icon-certificate'></i>
+                    <p class='lead lead-lg text-center'>Our Application Stack</p>
+                </div>
+            </div>
+            <div class='panels-wrapper'>
+                <div class='row panels'>
+                    <div class='col-sm-4 panel-item'>
+                        <div class='panel panel-big'>
+                            <div class='panel-icon'>
+                                <i class='fa-icon-mobile-phone icon'></i>
+                            </div>
+                            <div class='panel-body'>
+                                <h3 class='panel-title'>SoftLayer.com</h3>
+                                <p>We love this cloud platform.  It gives us the flexibility of virtual instances or bare metal compute to run our infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-4 panel-item'>
+                        <div class='panel panel-big'>
+                            <div class='panel-icon'>
+                                <i class='fa-icon-cog icon'></i>
+                            </div>
+                            <div class='panel-body'>
+                                <h3 class='panel-title'>Apache Mesos</h3>
+                                <p>Our worker cluster running all of your monitoring jobs.  This will give us the flexibility to run other monitoring code in the future all on the same clusters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-4 panel-item'>
+                        <div class='panel panel-big'>
+                            <div class='panel-icon'>
+                                <i class='fa-icon-time icon'></i>
+                            </div>
+                            <div class='panel-body'>
+                                <h3 class='panel-title'>Docker.io</h3>
+                                <p>Everyone's monitoring tests runs in their own <a href="http://Docker.io">Docker.io</a> container.  This provides an isolated container that is your own on our platform.  You don't have to worry about your code running in the same kernel space as other users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+              <!--
+            <div class='row'>
+              <div class='col-sm-12'>
+                <div class='page-header page-header-with-icon'>
+                  <i class='fa-icon-comment'></i>
+                  <h2>Newest blog posts</h2>
+                </div>
+                <div class='row text-boxes'>
+                  <div class='col-sm-6 text-box'>
+                    <div class='row'>
+                      <div class='col-sm-4'><img class="img-responsive center-block" alt="Lorem ipsum dolor sit amet" width="340" height="188" src="http://placehold.it/340x188" /></div>
+                      <div class='col-sm-8'>
+                        <h3 class='title'><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                        <div class='toolbar'>
+                          <a class='btn btn-link' href='#'>
+                            <i class='fa-icon-calendar-empty'></i>
+                            <span>April 19, 2013</span>
+                          </a>
+                        </div>
+                        <p>Nullam rhoncus, eros a commodo convallis, purus orci consectetur arcu, a euismod magna augue eu mi. Nunc tempus, lorem eu semper commodo, ipsum urna lobortis ligula.</p>
+                        <a class='btn btn-contrast btn-bordered btn-xs' href='#'>Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-sm-6 text-box'>
+                    <hr class='visible-xs'>
+                    <div class='row'>
+                      <div class='col-sm-4'><img class="img-responsive center-block" alt="Praesent vitae adipiscing nunc" width="330" height="183" src="http://placehold.it/330x183" /></div>
+                      <div class='col-sm-8'>
+                        <h3 class='title'><a href="#">Praesent vitae adipiscing nunc</a></h3>
+                        <div class='toolbar'>
+                          <a class='btn btn-link' href='#'>
+                            <i class='fa-icon-calendar-empty'></i>
+                            <span>March 3, 2013</span>
+                          </a>
+                        </div>
+                        <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque lectus eget quam ullamcorper consectetur. Vestibulum vitae risus a erat mollis.</p>
+                        <a class='btn btn-contrast btn-bordered btn-xs' href='#'>Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            -->
+
+             <!--
+            <div class='row'>
+              <div class='col-sm-12'>
+                <div class='page-header page-header-with-icon'>
+                  <i class='fa-icon-quote-right'></i>
+                  <h2>Testimonials</h2>
+                </div>
+                <div class='row quotes'>
+                  <div class='carousel carousel-default slide carousel-auto' id='carousel-testimonials'>
+                    <div class='carousel-inner'>
+                      <div class='item active quote'>
+                        <div class='col-sm-12 text-center'>
+                          <p class='lead'>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque lectus eget quam ullamcorper consectetur. Vestibulum vitae risus a erat mollis lac in venenatis tellus.</p>
+                          <div class='author-wrapper'>
+                            <p class='author'>
+                              <strong>John Doe</strong>,
+                              Company name
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='item quote'>
+                        <div class='col-sm-12 text-center'>
+                          <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan leo tellus. Nulla fringilla elementum nisl, vitae faucibus risus. Donec ut tristique eros. Curabitur mattis auctor turpis.</p>
+                          <div class='author-wrapper'>
+                            <p class='author'>
+                              <strong>Michal Marek</strong>,
+                              Bublina Studio
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='item quote'>
+                        <div class='col-sm-12 text-center'>
+                          <p class='lead'>Aenean lorem quam, dapibus et enim vel, ultrices tincidunt tellus. Donec mattis massa et lacus interdum lobortis. Pellentesque habitant morbi tristique senectus. Curabitur mattis auctor turpis.</p>
+                          <div class='author-wrapper'>
+                            <p class='author'>
+                              <strong>Paľo Delinčák</strong>,
+                              Bublina Studio
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='item quote'>
+                        <div class='col-sm-12 text-center'>
+                          <p class='lead'>Integer quis placerat leo, sit amet varius odio. Fusce sollicitudin metus eu eros egestas cursus ut ullamcorper augue. Integer blandit tellus a urna semper, sit amet tempor orci ornare. Mauris nec.</p>
+                          <div class='author-wrapper'>
+                            <p class='author'>
+                              <strong>Jane Doe</strong>,
+                              Company name
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ol class='carousel-indicators'>
+                      <li class='active' data-slide-to='0' data-target='#carousel-testimonials'></li>
+                      <li data-slide-to='1' data-target='#carousel-testimonials'></li>
+                      <li data-slide-to='2' data-target='#carousel-testimonials'></li>
+                      <li data-slide-to='3' data-target='#carousel-testimonials'></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            -->
+
+
+          </div>
+        </div>
+        <div class='fade' id='scroll-to-top'>
+          <i class='fa-icon-chevron-up'></i>
+        </div>
+      </div>
+      <footer id='footer'>
+        <div id='footer-main'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-3 col-sm-6 info-box'>
+                <h2 class='title'>About us</h2>
+                <p class='no-mg-b'>We are avid DevOps people making automated tools to make our lives easier and hopefully making your lives easier also.</p>
+              </div>
+              <div class='col-md-3 col-sm-6 info-box'>
+                <h2 class='title'>Contact</h2>
+                <div class='icon-boxes'>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-map-marker'></i>
+                    </div>
+                    <div class='content'>
+                      <a href="https://goo.gl/maps/ZbnCh">
+                      Citizen Space <br/>
+                      425 2nd St #100,
+                      <br>
+                      San Francisco, CA 94107
+                      </a>
+                    </div>
+                  </div>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-phone'></i>
+                    </div>
+                    <div class='content'>
+                      <a href='tel:+(415) 275-0321'>(415) 275-0321</a>
+                    </div>
+                  </div>
+                    <div class='icon-box'>
+                        <div class='icon icon-wrap'>
+                            <i class='fa-icon-envelope'></i>
+                        </div>
+                        <div class='content'><a href="mailto:info@AutoDevBot.com">info@AutoDevBot.com</a></div>
+                    </div>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-twitter'></i>
+                    </div>
+                    <div class='content'><a href="https://twitter.com/AutoDevBot">Twitter.com/AutoDevBot.com</a></div>
+                  </div>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-globe'></i>
+                    </div>
+                    <div class='content'><a href="http://www.autodevbot.com">www.AutoDevBot.com</a></div>
+                  </div>
+                    <div class='icon-box'>
+                        <div class='icon icon-wrap'>
+                            <i class='fa-icon-file'></i>
+                        </div>
+                        <div class='content'><a href="http://www.slideshare.net/garlandk/autodevbot-demo">Demo Slide Deck</a></div>
+                    </div>
+                </div>
+              </div>
+
+
+              <!--
+              <div class='col-md-3 col-sm-6 info-box'>
+                <h2 class='title'>Photostream</h2>
+                <ul class='list-unstyled list-inline image-list-box'>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img alt="Jednotka" width="50" height="50" src="http://placehold.it/50x50" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              -->
+
+                <!--
+              <div class='col-md-3 col-sm-6 info-box social-box'>
+                <h2 class='title'>Latest tweets</h2>
+                <div class='icon-boxes'>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-twitter text-contrast'></i>
+                    </div>
+                    <div class='content'>
+                      <p>
+                        Phasellus vulputate lobortis sem. Mauris id velit in urna.
+                        <br>
+                        <a class='time' href='#'>
+                          <i>1 hour ago</i>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class='icon-box'>
+                    <div class='icon icon-wrap'>
+                      <i class='fa-icon-twitter text-contrast'></i>
+                    </div>
+                    <div class='content'>
+                      <p>
+                        Etiam luctus, dui congue tempus blandit, dui.
+                        <br>
+                        <a class='time' href='#'>
+                          <i>3 hours ago</i>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                -->
+
+
+            </div>
+          </div>
+        </div>
+        <div id='footer-copyright'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-lg-12 clearfix'>
+                <p class='copyright'>
+                  Copyright
+                  &copy;
+                  2014 AutoDevBot.com
+                </p>
+                  <!--
+                <div class='links'>
+                  <a class='btn btn-circle btn-medium-light btn-sm' href='https://twitter.com/AutoDevBot'>
+                    <i class='fa-icon-twitter text-dark'></i>
+                  </a>
+                  -->
+                    <!--
+                  <a class='btn btn-circle btn-medium-light btn-sm' href='#'>
+                    <i class='fa-icon-dribbble text-dark'></i>
+                  </a>
+                  <a class='btn btn-circle btn-medium-light btn-sm' href='#'>
+                    <i class='fa-icon-facebook text-dark'></i>
+                  </a>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- / required javascripts -->
+    <script src="assets/javascripts/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/jquery/jquery.mobile.custom.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/modernizr/modernizr.custom.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/hover_dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/retina/retina.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/knob/jquery.knob.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/isotope/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/isotope/jquery.isotope.sloppy-masonry.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/validate/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/flexslider/jquery.flexslider.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/countdown/countdown.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/nivo_lightbox/nivo-lightbox.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/plugins/cycle/jquery.cycle.all.min.js" type="text/javascript"></script>
+    <script src="assets/javascripts/jednotka.js" type="text/javascript"></script>
+
+    <script>
+
+        $( document ).ready(function() {
+
+            // CodeMirror Editor
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                styleActiveLine: true,
+                matchBrackets: true,
+                smartIndent: true
+            });
+            editor.setOption("theme", "ambiance");
+        });
+
+
+    </script>
+
+    <!-- CrazyEgg -->
+    <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0021/5164.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+
+    <!-- Optimizely -->
+    <script src="//cdn.optimizely.com/js/238164306.js"></script>
+
+    <!-- Facebook Conversion Code for Autodevbot.com -->
+    <script type="text/javascript">
+        var fb_param = {};
+        fb_param.pixel_id = '6014604864087';
+        fb_param.value = '0.00';
+        fb_param.currency = 'USD';
+        (function(){
+            var fpw = document.createElement('script');
+            fpw.async = true;
+            fpw.src = '//connect.facebook.net/en_US/fp.js';
+            var ref = document.getElementsByTagName('script')[0];
+            ref.parentNode.insertBefore(fpw, ref);
+        })();
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6014604864087&amp;value=0&amp;currency=USD" /></noscript>
+
+
+  </body>
+</html>
